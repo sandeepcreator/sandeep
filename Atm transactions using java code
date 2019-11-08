@@ -1,0 +1,244 @@
+import java.util.*;
+
+public class ATMTransaction
+{
+ public static void main(String args[] )
+ {
+   Scanner s=new Scanner(System.in);
+   int a=1234;int as=2345;int re=9876;
+   System.out.println("WELCOME!!");
+   System.out.println("INSERT YOUR CARD");
+   System.out.println("ENTER YOUR PIN");
+   int b=s.nextInt();
+   if(a==b)
+    {
+      atmOne();
+    }
+    else if(as==b)
+    {
+     atmTwo();
+    }
+    else if(re==b)
+    {
+     atmThree();
+    }
+    else
+    {
+     System.out.println("Invalid PIN !!");
+    }
+  }  
+ static void atmOne()
+  {
+   Scanner s= new Scanner(System.in);
+   int balance = 10000, withdraw, deposit;
+    System.out.println("Welcome Ajay");
+    System.out.println( "Automatic Teller Machine");
+    System.out.println("Choose 1 for Withdraw");
+    System.out.println("Choose 2 for Deposit");
+    System.out.println("Choose 3 for Check Balance");
+    System.out.println("Choose 4 for EXIT");
+    System.out.print("Choose the operation you want to perform:");
+    int n = s.nextInt();
+    switch(n)
+    {
+      case 1:
+        System.out.println("SELECT YOUR ACCOUNT TYPE:");
+        System.out.println("A.Savings");
+        System.out.println("B.Current");
+        char A=s.next().charAt(0);
+        switch(A)
+        {
+         case 'A':
+            System.out.print("Enter money to be withdrawn:");
+            withdraw = s.nextInt();
+            if(balance >= withdraw)
+            {
+              balance = balance - withdraw;
+              System.out.println("Please collect your money");
+              System.out.println("Your Balance is"+balance);
+              System.out.println("Thanks for using ATM");
+            }
+            else
+            {
+              System.out.println("Insufficient Balance");
+            }
+            System.out.println("");
+            break;
+         case 'B':
+            System.out.print("Enter money to be withdrawn:");
+            withdraw = s.nextInt();
+            if(balance >= withdraw)
+             {
+               balance = balance - withdraw;
+               System.out.println("Please collect your money");
+               System.out.println("Your Balance is"+balance);
+             }
+            else
+            {
+              System.out.println("Insufficient Balance");
+            }
+            System.out.println("");
+            break;
+        }
+        break;
+       case 2:
+        System.out.print("Enter money to be deposited:");
+          deposit = s.nextInt();
+          balance = balance + deposit;
+          System.out.println("Your Money has been successfully deposited");
+          System.out.println("");
+          System.out.println("Your Balance is"+balance);
+          break;
+ 
+          case 3:
+          System.out.println("Balance : "+balance);
+          System.out.println("");
+          break;
+ 
+          case 4:
+          System.exit(0);
+    }
+  }
+ static void atmTwo()
+ {
+    Scanner s= new Scanner(System.in);
+    int balance = 5000, withdraw, deposit;  
+    System.out.println("Welcome Vamsi");
+    System.out.println( "Automatic Teller Machine");
+    System.out.println("Choose 1 for Withdraw");
+    System.out.println("Choose 2 for Deposit");
+    System.out.println("Choose 3 for Check Balance");
+    System.out.println("Choose 4 for EXIT");
+    System.out.print("Choose the operation you want to perform:");
+    int n = s.nextInt();
+    switch(n)
+    {
+      case 1:
+        System.out.println("SELECT YOUR ACCOUNT TYPE:");
+        System.out.println("A.Savings");
+        System.out.println("B.Current");
+        char A=s.next().charAt(0);
+        switch(A)
+        {
+         case 'A':
+            System.out.print("Enter money to be withdrawn:");
+            withdraw = s.nextInt();
+            if(balance >= withdraw)
+            {
+              balance = balance - withdraw;
+              System.out.println("Please collect your money");
+              System.out.println("Your Balance is"+balance);
+              System.out.println("Thanks for using ATM");
+            }
+            else
+            {
+              System.out.println("Insufficient Balance");
+            }
+            System.out.println("");
+            break;
+         case 'B':
+            System.out.print("Enter money to be withdrawn:");
+            withdraw = s.nextInt();
+            if(balance >= withdraw)
+             {
+               balance = balance - withdraw;
+               System.out.println("Please collect your money");
+               System.out.println("Your Balance is"+balance);
+             }
+            else
+            {
+              System.out.println("Insufficient Balance");
+            }
+             System.out.println("");
+             break;
+        }
+       case 2:
+       System.out.print("Enter money to be deposited:");
+          deposit = s.nextInt();
+          balance = balance + deposit;
+          System.out.println("Your Money has been successfully deposited");
+          System.out.println("");
+          System.out.println("Your Balance is"+balance);
+          break;
+ 
+          case 3:
+          System.out.println("Balance : "+balance);
+          System.out.println("");
+          break;
+ 
+          case 4:
+          System.exit(0);
+    }
+  }
+ static void atmThree()
+  {
+    Scanner s= new Scanner(System.in);
+    int balance = 2000, withdraw, deposit;
+    System.out.println("Welcome Bhairav");
+    System.out.println( "Automatic Teller Machine");
+    System.out.println("Choose 1 for Withdraw");
+    System.out.println("Choose 2 for Deposit");
+    System.out.println("Choose 3 for Check Balance");
+    System.out.println("Choose 4 for EXIT");
+    System.out.print("Choose the operation you want to perform:");
+    int n = s.nextInt();
+    switch(n)
+    {
+      case 1:
+        System.out.println("SELECT YOUR ACCOUNT TYPE:");
+        System.out.println("A.Savings");
+        System.out.println("B.Current");
+        char A=s.next().charAt(0);
+        switch(A)
+        {
+         case 'A':
+            System.out.print("Enter money to be withdrawn:");
+            withdraw = s.nextInt();
+            if(balance >= withdraw)
+            {
+              balance = balance - withdraw;
+              System.out.println("Please collect your money");
+              System.out.println("Your Balance is"+balance);
+              System.out.println("Thanks for using ATM");
+            }
+            else
+            {
+              System.out.println("Insufficient Balance");
+            }
+            System.out.println("");
+            break;
+         case 'B':
+            System.out.print("Enter money to be withdrawn:");
+            withdraw = s.nextInt();
+            if(balance >= withdraw)
+             {
+               balance = balance - withdraw;
+               System.out.println("Please collect your money");
+               System.out.println("Your Balance is"+balance);
+             }
+            else
+            {
+              System.out.println("Insufficient Balance");
+            }
+             System.out.println("");
+             break;
+        }
+       case 2:
+       System.out.print("Enter money to be deposited:");
+          deposit = s.nextInt();
+          balance = balance + deposit;
+          System.out.println("Your Money has been successfully deposited");
+          System.out.println("");
+          System.out.println("Your Balance is"+balance);
+          break;
+ 
+          case 3:
+          System.out.println("Balance : "+balance);
+          System.out.println("");
+          break;
+ 
+          case 4:
+          System.exit(0);
+    }
+  }
+}
